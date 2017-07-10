@@ -1,0 +1,12 @@
+<table padding="2px">
+  	<thead>
+        <th>Array Index</th>
+  			<th>Name</th>
+  	</thead>
+  	<tbody>
+  			<tr *ngFor="let user of users ; let i = index" >
+          <td *ngIf="isEven(i) ? 'color=green' : 'color=red'">{{i}}</td>
+  				<td [myHighlight]="color">{{user.name}}</td>
+  			</tr>
+  	</tbody>
+ </table>
